@@ -142,6 +142,39 @@
                         </p>
                         </div>
                     </div>
+                    <script>
+                        function calcularTempoEmprego(dataInicio) {
+                            const inicio = new Date(dataInicio);
+                            const agora = new Date();
+                            
+                            let anos = agora.getFullYear() - inicio.getFullYear();
+                            let meses = agora.getMonth() - inicio.getMonth();
+                            
+                            if (meses < 0) {
+                                anos--;
+                                meses += 12;
+                            }
+                            
+                            let resultado = "";
+                            if (anos > 0) {
+                                resultado += anos + (anos === 1 ? " ano" : " anos");
+                            }
+                            
+                            if (meses > 0) {
+                                if (resultado) resultado += " e ";
+                                resultado += meses + (meses === 1 ? " mês" : " meses");
+                            }
+                            
+                            return resultado || "Menos de um mês";
+                        }
+                
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const elemento = document.getElementById("tempoEmprego");
+                            if (elemento) {
+                                elemento.textContent = calcularTempoEmprego("2024-11-01");
+                            }
+                        });
+                    </script>
         
                     <div class="service d-flex" data-anime="left">
                         <div class="icon-service">
@@ -151,7 +184,9 @@
                             <h3 class="roboto-slab b-400">
                                 Resource IT Solutions</h3>
                             <h4>Assistente técnico</h4>
-                            <h5 style="align-items: center;">nov de 2024 - o momento · 1 mês De nov de 2024 até o momento · 1 mês
+                            <h5 style="align-items: center;">nov de 2024 - o momento ·
+                                 1 mês De nov de 2024 até o
+                                 momento · 5 mês
                                 </h5>
                                 <h5>Remota</h5>
                             
@@ -230,8 +265,8 @@
             
             <div class="about-content d-flex ">
                 <div data-anime="left">
-                   <p>Sou desenvolvedor de software com forte atuação em Delphi e PostgreSQL voltada para automação comercial. Possuo deficiência auditiva (CID H90.3) e utilizo aparelho auditivo, trabalhando normalmente.
-                    Estudante de Análise e Desenvolvimento de Sistemas no IFBA, fui aprovado na OBMEP no ensino médio, demonstrando habilidades em lógica. Meu objetivo é contribuir com soluções inovadoras e de qualidade, especialmente em projetos de automação comercial e em desenvolvimento de softwares.</p>
+                   <p>Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas no IFBA e fui aprovado na OBMEP durante o ensino médio, o que demonstra minhas habilidades em lógica de programação. Sou apaixonado pela linguagem Java e trabalho com o ecossistema Spring, incluindo Spring Boot, Spring Data, Spring Security e Spring MVC, OAuth2, JPA. Além disso, possuo conhecimentos em Delphi, C#, PHP, SQL e JavaScript.
+                </p>
                    <b><a  href="Laudo2024.pdf" target="_blank"><img style="width: 5%;" src="documento.png" alt=""> Laudo Médico       <a  href="CvErikLisboa.pdf.pdf" target="_blank"><img style="width: 5%;" src="documento.png" alt="">Currículo</p></a></p></b> 
                     <b><small>Os dados sensíveis foram ocultados.</small></b>   
                 </a><br><br> 
@@ -282,24 +317,25 @@
             </header>
             <div class="portifolio-content d-flex">
                 <div data-anime="top">
-                    <a href="#" target="_blank">
-                        <img src="foto-quadrada.jpg">
+                    <a href="https://meridianogeotecnologias.com.br/" target="_blank">
+                        <img src="po.jpg">
+                        <img src="meridiano.jpg" alt="">
                         <div class="display-black">
                             <i class="fa fa-search"></i>
                         </div>
                     </a>
                 </div>
                 <div data-anime="top">
-                    <a href="#" target="_blank">
-                        <img src="foto-quadrada.jpg">
+                    <a href="https://github.com/eriklisboa1/CRUD-SPRING-BOOT-" target="_blank">
+                        <img src="CRUD.jpeg">
                         <div class="display-black">
                             <i class="fa fa-search"></i>
                         </div>
                     </a>
                 </div>
                 <div data-anime="top">
-                    <a href="#" target="_blank">
-                        <img src="foto-quadrada.jpg">
+                    <a href="https://github.com/eriklisboa1/ProdutoAPI" target="_blank">
+                        <img src="API.png">
                         <div class="display-black">
                             <i class="fa fa-search"></i>
                         </div>
