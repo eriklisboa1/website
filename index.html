@@ -125,7 +125,33 @@
                         </p>
                     </div>
                 </div>
-            </div>
+                       <div class="service d-flex" data-anime="left">
+                    <div class="icon-service">
+                        <img src="icone-monitor.jpg" alt="Ícone Oracle Cloud" title="Plataformas Oracle">
+                    </div>
+                    <div class="about-service">
+                        <h3 class="roboto-slab b-400">Plataformas Oracle (OCI, SOA, Oracle Data Cloud)</h3>
+                        <p>
+                            Experiência em design e implantação de soluções na Oracle Cloud Infrastructure (OCI) – a nuvem da Oracle onde utilizamos buckets para armazenamento –,
+                            desenvolvimento e orquestração de serviços com Oracle SOA Suite e gerenciamento de dados com Oracle Data Cloud.
+                            Implanto fluxos de integração, monitoro performance e garanto alta disponibilidade para aplicações corporativas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service d-flex" data-anime="left">
+                    <div class="icon-service">
+                        <img src="icone-monitor.jpg" alt="Ícone React.js" title="React.js e Spring Boot">
+                    </div>
+                    <div class="about-service">
+                        <h3 class="roboto-slab b-400">Front‑end com React.js Integrando APIs Spring Boot</h3>
+                        <p>
+                            Desenvolvimento de SPAs modernas em React.js, consumindo endpoints RESTful e WebFlux do Spring Boot.
+                            Uso de axios/fetch, React Hooks e Context API para gerenciar estado e autenticação, garantindo interfaces
+                            dinâmicas, performáticas e de fácil manutenção.
+                        </p>
+                    </div>
+                </div>
 
         </div>
     </section>
@@ -228,11 +254,13 @@
                             <div class="about-service">
                                 <h3 class="roboto-slab b-400">Desenvolvedor Java Spring Boot</h3><br>
                                 <h4>Qintess· Tempo integral</h4>
-                             <h5 style="align-items: center;">nov de 2024 - o momento · 7 mês
-                                </h5>
+                                                <h5 style="align-items: center;">
+                        Nov de 2024 – <span id="tempoEmprego">carregando…</span>
+                        </h5>
                                 <h5>Remota</h5>
                             <p>
                                 <li>Desenvolvimento de APIs REST</li>
+                                <li>Integração com Oracle Cloud Infrastructure (OCI) usando WebClient | Spring WebFlux</li>
                                 <li> Padrão MVC (Model‑View‑Controller)</li>
                                 <li>PostgreSQL</li>
                                 <li>Protocolo SOAP</li>
@@ -240,6 +268,32 @@
                                 <li>Documentação de APIs (Swagger / OpenAPI)</li>
                                 <li>Docker e conteinerização</li>
                             </p>
+                            <script>
+                            function calcularTempoEmprego(dataInicio) {
+                                const inicio  = new Date(dataInicio);
+                                const agora   = new Date();
+                                let   anos    = agora.getFullYear() - inicio.getFullYear();
+                                let   meses   = agora.getMonth()    - inicio.getMonth();
+
+                                if (meses < 0) {
+                                anos--;
+                                meses += 12;
+                                }
+
+                                const partes = [];
+                                if (anos  > 0) partes.push(anos  + (anos  === 1 ? " ano"   : " anos"));
+                                if (meses > 0) partes.push(meses + (meses === 1 ? " mês"   : " meses"));
+                                return partes.length ? partes.join(" e ") : "Menos de um mês";
+                            }
+
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const el = document.getElementById("tempoEmprego");
+                                if (el) {
+                                // passe aqui a data exata em formato YYYY‑MM‑DD do seu ingresso
+                                el.textContent = calcularTempoEmprego("2024-11-01");
+                                }
+                            });
+                            </script>
                         </div>
                     </div>
                  
@@ -294,11 +348,11 @@
 
             <div class="service d-flex" data-anime="left">
                 <div class="icon-service">
-                    <img src="test.png" alt="Icone de um computador" title="desenvolvimento front-end">
+                    <img src="uniasselvi.png" alt="Icone de um computador" title="desenvolvimento front-end">
                 </div>
                 <div class="about-service">
                     <h3 class="roboto-slab b-400">
-                        IFBA - Instituto Federal da Bahia</h3>
+                        uniasselvi</h3>
                     <h4>Curso Superior de Tecnologia (CST), Análise e Desenvolvimento de Sistemas.</h4>
                     <h4>5º Semestre</h4>
                 </div>
